@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Beeketing_IntegrateApp",
+    "type": "magento-module",
+    "license": "Beeketing-TOS",
+    "homepage": "",
+    "description": "Better coupon box for magento",
+    "authors": [
+    {
+        "name": "Beeketing Inc.",
+        "email": "hi@beeketing.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

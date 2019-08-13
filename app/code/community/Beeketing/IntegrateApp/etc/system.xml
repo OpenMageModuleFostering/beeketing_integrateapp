@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <beeketing_config translate="label" module="beeketing_integrateapp">
+            <label>Beeketing</label>
+            <sort_order>150</sort_order>
+        </beeketing_config>
+    </tabs>
+    <sections>
+        <bee_options translate="label" module="beeketing_integrateapp">
+            <label>Configuration</label>
+            <tab>beeketing_config</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label comment">
+                    <label>Access Key</label>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[Enter your Access Key below to connect your store with Beeketing, you can <a href="javascript:void(0);" id="beeketing-get-access-key" target="_blank">get your access key</a> from your Beeketing's account page.]]></comment>
+                    <fields>
+                        <api_key translate="label comment">
+                            <label>Access Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </api_key>
+                    </fields>
+                    <expanded>1</expanded>
+                </general>
+            </groups>
+        </bee_options>
+    </sections>
+</config>

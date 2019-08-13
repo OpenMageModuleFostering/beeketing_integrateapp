@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module configuration
+ *
+ * @author Magento
+ */
+-->
+<config>
+    <modules>
+        <Beeketing_IntegrateApp>
+            <version>1.0.0.0.1</version>
+        </Beeketing_IntegrateApp>
+    </modules>
+    <global>
+        <models>
+            <beeketing_integrateapp>
+                <class>Beeketing_IntegrateApp_Model</class>
+            </beeketing_integrateapp>
+        </models>
+        <helpers>
+            <beeketing_integrateapp>
+                <class>Beeketing_IntegrateApp_Helper</class>
+            </beeketing_integrateapp>
+        </helpers>
+        <events>
+            <!-- Magento after save product -->
+            <catalog_product_save_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Product>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Product</class>
+                        <method>productAfterSave</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Product>
+                </observers>
+            </catalog_product_save_after>
+            <!-- Magento after delete product -->
+            <catalog_product_delete_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Product>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Product</class>
+                        <method>productDeleteAfter</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Product>
+                </observers>
+            </catalog_product_delete_after>
+
+            <!-- Magento after save category -->
+            <catalog_category_save_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Collection>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Collection</class>
+                        <method>collectionAfterSave</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Collection>
+                </observers>
+            </catalog_category_save_after>
+            <!-- Magento after save customer -->
+            <customer_save_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Customer>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Customer</class>
+                        <method>customerAfterSave</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Customer>
+                </observers>
+            </customer_save_after>
+            <!-- Magento after delete customer -->
+            <customer_delete_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Customer>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Customer</class>
+                        <method>customerDeleteAfter</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Customer>
+                </observers>
+            </customer_delete_after>
+            <!-- Magento after save order -->
+            <sales_order_save_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Order>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Order</class>
+                        <method>orderAfterSave</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Order>
+                </observers>
+            </sales_order_save_after>
+        </events>
+    </global>
+    <default>
+        <bee_options>
+            <general>
+                <text_field>Default value</text_field>
+                <textarea></textarea>
+                <dropdown>key2</dropdown>
+                <multiple_dropdown>key1,key2</multiple_dropdown>
+                <time>11,30,45</time>
+                <active>0</active>
+                <boolean>1</boolean>
+                <dependant_text_field>Default value</dependant_text_field>
+            </general>
+        </bee_options>
+    </default>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Beeketing_IntegrateApp before="Mage_Adminhtml">Beeketing_IntegrateApp</Beeketing_IntegrateApp>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer</class>
+                        <method>addBlockHtmlBefore</method>
+                    </Beeketing_IntegrateApp_Model_Observer>
+                </observers>
+            </adminhtml_block_html_before>
+            <controller_action_layout_load_before>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer</class>
+                        <method>showNotifcation</method>
+                    </Beeketing_IntegrateApp_Model_Observer>
+                </observers>
+            </controller_action_layout_load_before>
+            <cataloginventory_stock_item_save_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Product>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Product</class>
+                        <method>productInventorySaveAfter</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Product>
+                </observers>
+            </cataloginventory_stock_item_save_after>
+        </events>
+        <layout>
+            <updates>
+                <index>
+                    <file>your-group-name/your-extension-name.xml</file>
+                </index>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer</class>
+                        <method>addFrontendScripts</method>
+                    </Beeketing_IntegrateApp_Model_Observer>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+            <!-- Magento after add cart -->
+            <checkout_cart_product_add_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Cart>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Cart</class>
+                        <method>checkoutCartProductAddAfter</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Cart>
+                </observers>
+            </checkout_cart_product_add_after>
+            <!-- Magento remove from cart -->
+            <sales_quote_remove_item>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Cart>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Cart</class>
+                        <method>removeFromCart</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Cart>
+                </observers>
+            </sales_quote_remove_item>
+            <!--Add extra option-->
+            <sales_convert_quote_item_to_order_item>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Order>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Order</class>
+                        <method>salesConvertQuoteItemToOrderItem</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Order>
+                </observers>
+            </sales_convert_quote_item_to_order_item>
+            <!--Add custom option to product-->
+            <catalog_product_load_after>
+                <observers>
+                    <Beeketing_IntegrateApp_Model_Observer_Product>
+                        <type>singleton</type>
+                        <class>Beeketing_IntegrateApp_Model_Observer_Product</class>
+                        <method>catalogProductLoadAfter</method>
+                    </Beeketing_IntegrateApp_Model_Observer_Product>
+                </observers>
+            </catalog_product_load_after>
+        </events>
+        <routers>
+            <beeketing>
+                <use>standard</use>
+                <args>
+                    <module>Beeketing_IntegrateApp</module>
+                    <frontName>beeketing</frontName>
+                </args>
+            </beeketing>
+        </routers>
+    </frontend>
+</config>

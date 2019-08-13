@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+    <name>Beeketing_IntegrateApp</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="https://beeketing.com/terms-of-service">Beeketing TOS</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Better coupon box for magento</summary>
+    <description>Popup a coupon box to turn visitors into social followers and increase sales.</description>
+    <notes>Add new apps features:&#xD;
+- Email Automation&#xD;
+- Checkout Boost&#xD;
+- Boost Sales&#xD;
+- Product recommendation&#xD;
+- Happy Email</notes>
+    <authors><author><name>Beeketing Inc.</name><user>beeketing</user><email>hi@beeketing.com</email></author></authors>
+    <date>2016-02-22</date>
+    <time>10:44:12</time>
+    <contents><target name="magecommunity"><dir name="Beeketing"><dir name="IntegrateApp"><dir name="Block"><file name="AppsData.php" hash="6461a643a567576f8f1d175fac9278df"/></dir><dir name="Helper"><file name="Collection.php" hash="e28a0d5f779abf0cd86feccdaaa973bc"/><file name="Core.php" hash="0acd00eed4b834b269296687d91fd1b1"/><file name="Customer.php" hash="d3f9a4c6f8e1451f49e2e31e766ce920"/><file name="Data.php" hash="e83e2bab30882694bae849a7f1ee7b16"/><file name="Order.php" hash="9d32ef0744ff4c9d5acce20065097656"/><file name="Product.php" hash="a335727c65516a79b8aec35e86a025a8"/></dir><dir name="Model"><dir name="Observer"><file name="Cart.php" hash="cc9d910bc1d17ba8662f01f799b6b7ec"/><file name="Collection.php" hash="9afe12495f0a7ed5d12adaa60c968356"/><file name="Customer.php" hash="d7439e9a1ddddc943256aa0eec795c7f"/><file name="Order.php" hash="de5f161bffc7c8480f3761214cba4a45"/><file name="Product.php" hash="4c16d6a9c949923c17d150f5a1497e9a"/></dir><file name="Observer.php" hash="f0ed89797bfb6ebd2948ee1ad9418601"/></dir><dir name="controllers"><dir name="Api"><file name="CartController.php" hash="be9153a9ef19345ee9d1e3932801c390"/><file name="CollectionController.php" hash="3a340a80504f5c21058ad5f0aaaebfc9"/><file name="CustomerController.php" hash="1ca877ee2d9f8d721e5f385ff47ddba5"/><file name="OrderController.php" hash="bab8b48b6190c519b5e330235273481d"/><file name="ProductController.php" hash="525bac7b4a9c32acd656d43fb459fe3b"/><file name="ShopController.php" hash="d33836da67a77c6fd676563d4fcc4de3"/></dir><dir name="System"><file name="ConfigController.php" hash="3223c0664664c0a00a9436ba9295df84"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="acad7350f6a65ddcc79aae9633486186"/><file name="config.xml" hash="c833b2cfc5f5bc335703394e3b626b25"/><file name="system.xml" hash="4cdb3cadc13663b7c6d0a797937fd6b4"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Beeketing_IntegrateApp.xml" hash="f3c4c8f3b53d8767fb823611797c434e"/></dir></target><target name="magelib"><dir name="Beeketing"><file name="BeeketingMagento.php" hash="e2541b7ce0f4fda9b09dc85c732c13ee"/><file name="config.php" hash="6e4937ff01b865253a2005a712b0fbba"/><file name="env" hash="59477fcee407fa1b188bd9152683fcf8"/></dir><dir name="BeeketingSDK"><dir name="Api"><file name="BeeketingApi.php" hash="66514ca6c786f1622f28785111432b1b"/><file name="BeeketingCart.php" hash="1bf954917b903e1048c07181ab60c7cf"/><file name="BeeketingCollections.php" hash="6e348074bc4aa523a046259c5b2436aa"/><file name="BeeketingCollects.php" hash="199a4ffd29f19b7cac53d2eafbf13374"/><file name="BeeketingCustomers.php" hash="ab0a7b1f81890a5a8f6ea0bbb1de300b"/><file name="BeeketingOrders.php" hash="0e458799bc7e06b8c79e33b57e1c65c0"/><file name="BeeketingProducts.php" hash="186b4789a9225ea7c1bbf6d01427c1fa"/><file name="BeeketingShop.php" hash="a595a3c12a79e2ae07fa6f668395abfd"/></dir><dir name="Config"><file name="BeeketingConfig.php" hash="0b663bf286a4d4f3238417d306a57416"/></dir><dir name="Helper"><file name="beeketing-cron-functions.php" hash="5b74590060f27c2fb8bc98baf75b1efc"/><file name="beeketing-helper-functions.php" hash="a5c0cde4d28c9eb3ec33f59f8dcbf929"/></dir><dir name="Snippet"><file name="DefaultSnippet.php" hash="2ef0a979af6b2119b3cbe7482a39df78"/><file name="SnippetManager.php" hash="7b8b814517e78aab478732cdcca39a57"/><dir name="Templates"><file name="CouponBoxSnippet.html" hash="2d5d82ad4a2b16ae36b0be8c5ccf0f6c"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>5.6.18</max></php></required></dependencies>
+</package>
