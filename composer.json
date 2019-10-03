@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/Beeketing_IntegrateApp",
+    "name": "openmage-module-fostering\/beeketing_integrateapp",
     "type": "magento-module",
     "license": "Beeketing-TOS",
     "homepage": "",
